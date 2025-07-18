@@ -80,6 +80,6 @@ public class Habitacion {
 
     @Override
     public String toString() {
-        return "Habitacion"+ numero " - " + tipoHabitacion.getNombre() + " en " + hotel.getNombre();
+        return "Habitacion"+ numero +" - " + tipoHabitacion.getNombre() + " en " + hotel.getNombre();
     }
 }
