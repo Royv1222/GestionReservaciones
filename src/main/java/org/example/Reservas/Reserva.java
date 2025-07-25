@@ -1,9 +1,7 @@
 package org.example.Reservas;
-import org.example.Excepcion;
 import org.example.Habitacion;
 import org.example.Usuarios.Cliente;
 import java.time.LocalDateTime;
-
 
 public class Reserva {
     private int idReserva;
@@ -13,15 +11,7 @@ public class Reserva {
     private LocalDateTime fechaSalida;
     private boolean activa;
 
-    public Reserva(int idReserva, Cliente cliente, Habitacion habitacion,
-                   LocalDateTime fechaEntrada, LocalDateTime fechaSalida) throws Excepcion.DatosInvalidosException {
-        if (fechaEntrada.isAfter(fechaSalida)) {
-            throw new Excepcion.DatosInvalidosException("La fecha de entrada no puede ser posterior a la de salida.");
-        }
-        if (cliente == null || habitacion == null) {
-            throw new Excepcion.DatosInvalidosException("Cliente y habitacion no pueden estar vacio.");
-        }
-
+    public Reserva(int idReserva, Cliente cliente, Habitacion habitacion, LocalDateTime fechaEntrada, LocalDateTime fechaSalida) {
         this.idReserva = idReserva;
         this.cliente = cliente;
         this.habitacion = habitacion;
